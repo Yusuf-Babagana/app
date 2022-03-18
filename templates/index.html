@@ -28,8 +28,7 @@
   </form>
   <h2>List of users</h2>
   {% for u in users %}
-    <p>{{ u.name }} you have applied to the online training organized by BT_ACADEMY -- your E-mail address is: {{ u.email }}, Inshaa Allah
-we'll let you know, if you are qualified</p>
+    <p>{{ u.name }} -- {{ u.email }}</p>
   {% else %}
     <p>No users found in the db. You can make some above.</p>
   {% endfor %}
