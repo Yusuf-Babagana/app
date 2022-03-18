@@ -1,8 +1,23 @@
 {% extends "layout.html" %}
 
 {% block body %}
+<head>
+  <title>BT ACADEMY</title>
+  <style type = "text/css">
+    em { font-weight: bold;
+      color: black; }
+    h1 { font-family: tahoma, helvetica, sams-serif }
+    p  { font-size: 12pt;
+      font-family: arial, sans-serif }
+    .special { color: #6666ff }
+  </style>
+</head>
 <h1 align="center">BT SOFTWARE ENGINEERING ACADEMY ONLINE FORM</h1>
-< hr/>
+  <h1 align="center">ABOUT THE COMPANY</h1>
+  <p>Bt Software Engineering Academy, is an international software academy/company based in an ancient city of Kano,
+    it's recognized corporate training and publishing organization specializing in programming languages, Internet/World Wide Web technology and object
+    technology education. The Company provides courses on C, C++, Java, Python, Flutter, Golang, C# and many more, in accordance with the principles of 
+    Software Engineering</p>
   <h1>Add a user</h1>
   <form action="{{ url_for('user') }}" method="post">
     <label for="name">Name</label>
@@ -13,7 +28,8 @@
   </form>
   <h2>List of users</h2>
   {% for u in users %}
-    <p>{{ u.name }} -- {{ u.email }}</p>
+    <p>{{ u.name }} you have applied to the online training organized by BT_ACADEMY -- your E-mail address is: {{ u.email }}, Inshaa Allah
+we'll let you know, if you are qualified</p>
   {% else %}
     <p>No users found in the db. You can make some above.</p>
   {% endfor %}
