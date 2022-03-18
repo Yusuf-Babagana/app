@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h1 align = "center", color = "red">COURSE TUTOR: YUSUF MUHAMMAD ASSALAFY</h1>
-<h1 align="center", color="green">BT SOFTWARE ENGINEERING ACADEMY ONLINE FORM</h1>
-  <h1 align = "center">Add your name and email underneath to be part of the trainees</h1>
+<h1 style ="font-size: 25pt; color: #6666ff", align = "center"">COURSE TUTOR: YUSUF MUHAMMAD ASSALAFY</h1>
+<h1 style ="font-size: 20pt; color: #6666ff", align="center", color="green">BT SOFTWARE ENGINEERING ACADEMY ONLINE FREE TRAINING COURSE FORM</h1>
+  <h1style ="font-size: 10pt; color: #6666ff",  align = "center">Add your name and email underneath to be part of the trainees</h1>
   <form action="{{ url_for('user') }}" method="post">
     <label for="name">Name</label>
     <input id="name" type="text" name="name" placeholder="BT_SOFTWARE" required />
@@ -11,7 +11,7 @@
     <input id="email" type="email" name="email" placeholder="bt_software@example.com" required />
     <button type="submit">Save</button>
   </form>
-  <h2>List of users</h2>
+  <h2>People endrolled::</h2>
   {% for u in users %}
     <p>{{ u.name }} -- {{ u.email }}</p>
   {% else %}
